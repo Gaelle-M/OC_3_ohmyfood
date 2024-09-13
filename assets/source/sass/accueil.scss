@@ -1,0 +1,182 @@
+@import "_settings";
+@import "global";
+
+/** LOCALISATION **/
+.localisation-container {
+  background: #eaeaea;
+  @include center;
+  gap: 17px;
+  height: 50px;
+  filter: drop-shadow(0 0 0.4rem #00000040);
+
+  i {
+    color: #353535;
+    width: 12px;
+    height: 16px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/** MENU **/
+.menu {
+  @include center;
+  background: #f3f3f3;
+
+  .menu-reservation {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+      margin: 50px 0 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    .btn-home {
+      width: 218px;
+      height: 50px;
+    }
+  }
+}
+
+/** FONCTIONNEMENT **/
+.container-fonctionnement {
+  padding: 60px 0;
+
+  h2 {
+    margin-left: 25px;
+  }
+
+  .container-steps {
+    margin-top: 30px;
+    @include center;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .step-fonctionnement {
+    @include center;
+    gap: 20px;
+    background: #f6f6f6;
+    width: 320px;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px #00000026;
+  }
+
+  .circle-number {
+    @include center;
+    background: $color-purple;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    color: white;
+    position: relative;
+    left: -15%;
+  }
+
+  i {
+    color: #7e7e7e;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+/** RESTAURANT **/
+#container-restaurants {
+  padding: 50px 0;
+  background: #f3f3f3;
+
+  h2 {
+    font-size: 24px;
+    margin: 20px;
+  }
+
+  .container-cards-restaurant {
+    @include center;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .card-restaurant {
+    background: #ffffff;
+    width: 340px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px #0000001a;
+    position: relative;
+  }
+
+  .container-img {
+    img {
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .nouveau {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: $color-light-green;
+      width: 80px;
+      height: 30px;
+      @include center;
+      border-radius: 2px;
+      font-size: 14px;
+      color: #008766;
+      font-weight: 600;
+    }
+  }
+
+  .container-card-bottom {
+    display: flex;
+    padding: 10px 0;
+
+    .container-text {
+      margin-left: 13px;
+      width: 70%;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+
+    .container-icon {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 30%;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      i {
+        margin-right: 13px;
+        font-size: 22px;
+        font-weight: lighter;
+      }
+    }
+  }
+}

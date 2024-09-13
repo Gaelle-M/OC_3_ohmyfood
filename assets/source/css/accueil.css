@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "font-title";
+  src: url(../../fonts/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "font-text";
+  src: url(../../fonts/Roboto-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "font-text", sans-serif;
+}
+
+/** HEADER **/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header img {
+  width: 197px;
+  height: 36px;
+  margin: 14px;
+}
+
+/** BOUTONS**/
+.btn {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  margin-bottom: 20px;
+  color: white;
+  font-style: 16px;
+  font-weight: 500;
+}
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/** FOOTER **/
+footer {
+  background: #353535;
+  color: #ffffff;
+}
+footer h4 {
+  font-family: "font-title", sans-serif;
+  font-style: 18px;
+  font-weight: 400;
+  padding: 22px 25px;
+  gap: 16px;
+}
+footer .container-link {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0 25px;
+}
+footer .link {
+  display: flex;
+  gap: 10px;
+}
+footer .link i {
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .container-link-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .container-link-nav a {
+  color: white;
+  font-style: 16px;
+}
+
+/** LOCALISATION **/
+.localisation-container {
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.2509803922));
+}
+.localisation-container i {
+  color: #353535;
+  width: 12px;
+  height: 16px;
+}
+.localisation-container p {
+  font-size: 18px;
+}
+
+/** MENU **/
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f3;
+}
+.menu .menu-reservation {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.menu .menu-reservation h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 50px 0 20px;
+}
+.menu .menu-reservation p {
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+.menu .menu-reservation .btn-home {
+  width: 218px;
+  height: 50px;
+}
+
+/** FONCTIONNEMENT **/
+.container-fonctionnement {
+  padding: 60px 0;
+}
+.container-fonctionnement h2 {
+  margin-left: 25px;
+}
+.container-fonctionnement .container-steps {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.container-fonctionnement .step-fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #f6f6f6;
+  width: 320px;
+  height: 70px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.container-fonctionnement .circle-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9356dc;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  color: white;
+  position: relative;
+  left: -15%;
+}
+.container-fonctionnement i {
+  color: #7e7e7e;
+}
+.container-fonctionnement p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/** RESTAURANT **/
+#container-restaurants {
+  padding: 50px 0;
+  background: #f3f3f3;
+}
+#container-restaurants h2 {
+  font-size: 24px;
+  margin: 20px;
+}
+#container-restaurants .container-cards-restaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+#container-restaurants .card-restaurant {
+  background: #ffffff;
+  width: 340px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  position: relative;
+}
+#container-restaurants .container-img img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 230px;
+  object-fit: cover;
+}
+#container-restaurants .container-img .nouveau {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #99e2d0;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #008766;
+  font-weight: 600;
+}
+#container-restaurants .container-card-bottom {
+  display: flex;
+  padding: 10px 0;
+}
+#container-restaurants .container-card-bottom .container-text {
+  margin-left: 13px;
+  width: 70%;
+}
+#container-restaurants .container-card-bottom .container-text h3 {
+  font-size: 18px;
+}
+#container-restaurants .container-card-bottom .container-text p {
+  font-size: 17px;
+}
+#container-restaurants .container-card-bottom .container-icon {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 30%;
+}
+#container-restaurants .container-card-bottom .container-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#container-restaurants .container-card-bottom .container-icon i {
+  margin-right: 13px;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=accueil.css.map */
