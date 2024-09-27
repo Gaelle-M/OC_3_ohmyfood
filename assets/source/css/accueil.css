@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "font-title";
   src: url(../../fonts/Shrikhand-Regular.ttf);
@@ -18,11 +19,18 @@ body {
   font-family: "font-text", sans-serif;
 }
 
+a {
+  color: black;
+}
+
 /** HEADER **/
 header {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  position: relative;
+  z-index: 2;
 }
 header img {
   width: 197px;
@@ -38,8 +46,10 @@ header img {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   margin-bottom: 20px;
   color: white;
-  font-style: 16px;
+  font-size: 16px;
   font-weight: 500;
+  padding: 13px 18px;
+  transition: 0.3s all;
 }
 .btn:hover {
   opacity: 0.8;
@@ -78,6 +88,7 @@ footer .container-link-nav {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  padding-bottom: 30px;
 }
 footer .container-link-nav a {
   color: white;
@@ -92,15 +103,20 @@ footer .container-link-nav a {
   align-items: center;
   gap: 17px;
   height: 50px;
-  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.2509803922));
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  position: relative;
+  z-index: 1;
 }
 .localisation-container i {
   color: #353535;
   width: 12px;
   height: 16px;
 }
-.localisation-container p {
-  font-size: 18px;
+.localisation-container input {
+  font-size: 16px;
+  max-width: 110px;
+  background: transparent;
+  border: none;
 }
 
 /** MENU **/
@@ -142,7 +158,8 @@ footer .container-link-nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 20px;
   gap: 40px;
 }
 .container-fonctionnement .step-fonctionnement {
@@ -155,6 +172,7 @@ footer .container-link-nav a {
   height: 70px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
 }
 .container-fonctionnement .circle-number {
   display: flex;
@@ -165,11 +183,15 @@ footer .container-link-nav a {
   height: 25px;
   border-radius: 50px;
   color: white;
-  position: relative;
-  left: -15%;
+  position: absolute;
+  left: -12px;
+  top: calc(50% - 12.5px);
 }
 .container-fonctionnement i {
   color: #7e7e7e;
+}
+.container-fonctionnement .fa-store {
+  color: #9356dc;
 }
 .container-fonctionnement p {
   font-size: 16px;
@@ -189,16 +211,21 @@ footer .container-link-nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 40px;
+  padding: 0 20px;
 }
 #container-restaurants .card-restaurant {
   background: #ffffff;
-  width: 340px;
   height: auto;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
+  width: 345px;
+  max-width: 490px;
+}
+#container-restaurants .container-img {
+  display: flex;
 }
 #container-restaurants .container-img img {
   width: 100%;
@@ -251,6 +278,36 @@ footer .container-link-nav a {
   margin-right: 13px;
   font-size: 22px;
   font-weight: lighter;
+}
+
+/**** RESPONSIVE ****/
+/*** Partie des étapes ***/
+@media (min-width: 720px) {
+  .container-fonctionnement .container-steps {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: auto;
+  }
+  .container-fonctionnement .container-steps p {
+    font-size: 14px;
+  }
+  .container-fonctionnement .container-steps i {
+    margin-left: 15px;
+  }
+}
+/*** Partie des cartes du restaurant ***/
+@media (min-width: 720px) {
+  #container-restaurants .container-cards-restaurant {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1155px) {
+  #container-restaurants .container-cards-restaurant {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=accueil.css.map */
