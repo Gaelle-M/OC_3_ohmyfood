@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "font-title";
   src: url(../../fonts/Shrikhand-Regular.ttf);
@@ -28,7 +27,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2509803922);
   position: relative;
   z-index: 2;
 }
@@ -43,7 +42,7 @@ header img {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   border: none;
   border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
   margin-bottom: 20px;
   color: white;
   font-size: 16px;
@@ -61,6 +60,12 @@ footer {
   background: #353535;
   color: #ffffff;
 }
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
 footer h4 {
   font-family: "font-title", sans-serif;
   font-style: 18px;
@@ -73,6 +78,15 @@ footer .container-link {
   flex-direction: column;
   gap: 7px;
   padding: 0 25px;
+}
+@media screen and (min-width: 1024px) {
+  footer .container-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 footer .link {
   display: flex;
@@ -90,6 +104,14 @@ footer .container-link-nav {
   gap: 7px;
   padding-bottom: 30px;
 }
+@media screen and (min-width: 1024px) {
+  footer .container-link-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 20px;
+  }
+}
 footer .container-link-nav a {
   color: white;
   font-style: 16px;
@@ -103,7 +125,7 @@ footer .container-link-nav a {
   align-items: center;
   gap: 17px;
   height: 50px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2509803922);
   position: relative;
   z-index: 1;
 }
@@ -162,6 +184,17 @@ footer .container-link-nav a {
   padding: 0 20px;
   gap: 40px;
 }
+@media screen and (min-width: 720px) {
+  .container-fonctionnement .container-steps {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-fonctionnement .container-steps {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .container-fonctionnement .step-fonctionnement {
   display: flex;
   justify-content: center;
@@ -171,7 +204,7 @@ footer .container-link-nav a {
   width: 320px;
   height: 70px;
   border-radius: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
   position: relative;
 }
 .container-fonctionnement .circle-number {
@@ -211,18 +244,42 @@ footer .container-link-nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 40px;
   padding: 0 20px;
+}
+@media screen and (min-width: 769px) {
+  #container-restaurants .container-cards-restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media screen and (min-width: 769px) {
+  #container-restaurants .container-cards-restaurant a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 #container-restaurants .card-restaurant {
   background: #ffffff;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1019607843);
   position: relative;
-  width: 345px;
+  width: 300px;
   max-width: 490px;
+}
+@media screen and (min-width: 375px) {
+  #container-restaurants .card-restaurant {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #container-restaurants .card-restaurant {
+    width: 490px;
+  }
 }
 #container-restaurants .container-img {
   display: flex;
@@ -278,36 +335,6 @@ footer .container-link-nav a {
   margin-right: 13px;
   font-size: 22px;
   font-weight: lighter;
-}
-
-/**** RESPONSIVE ****/
-/*** Partie des étapes ***/
-@media (min-width: 720px) {
-  .container-fonctionnement .container-steps {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: auto;
-  }
-  .container-fonctionnement .container-steps p {
-    font-size: 14px;
-  }
-  .container-fonctionnement .container-steps i {
-    margin-left: 15px;
-  }
-}
-/*** Partie des cartes du restaurant ***/
-@media (min-width: 720px) {
-  #container-restaurants .container-cards-restaurant {
-    flex-direction: row;
-  }
-}
-@media (min-width: 1155px) {
-  #container-restaurants .container-cards-restaurant {
-    flex-direction: row;
-  }
 }
 
 /*# sourceMappingURL=accueil.css.map */

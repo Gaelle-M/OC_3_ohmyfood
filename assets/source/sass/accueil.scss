@@ -7,7 +7,7 @@
   @include center;
   gap: 17px;
   height: 50px;
-  box-shadow: 0px 4px 4px 0px #00000040;
+  box-shadow: 0 4px 4px 0 #00000040;
   position: relative;
   z-index: 1;
 
@@ -68,8 +68,15 @@
     flex-wrap: wrap;
     padding: 0 20px;
     gap: 40px;
-  }
 
+    @media screen and (min-width: 720px) {
+      flex-direction: column;
+    }
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
   .step-fonctionnement {
     @include center;
     gap: 20px;
@@ -77,7 +84,7 @@
     width: 320px;
     height: 70px;
     border-radius: 20px;
-    box-shadow: 0px 4px 15px 0px #00000026;
+    box-shadow: 0 4px 15px 0 #00000026;
     position: relative;
   }
 
@@ -97,9 +104,9 @@
     color: #7e7e7e;
   }
 
-.fa-store {
-  color: $color-purple;
-}
+  .fa-store {
+    color: $color-purple;
+  }
 
   p {
     font-size: 16px;
@@ -119,21 +126,41 @@
 
   .container-cards-restaurant {
     @include center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 40px;
     padding: 0 20px;
+
+    @media screen and (min-width: 769px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    a {
+      @media screen and (min-width: 769px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 
   .card-restaurant {
     background: #ffffff;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px #0000001a;
+    box-shadow: 0 4px 15px 0 #0000001a;
     position: relative;
-    width: 345px;
+    width: 300px;
     max-width: 490px;
-  }
 
+    @media screen and (min-width: 375px) {
+      width: 350px;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 490px;
+    }
+  }
   .container-img {
     display: flex;
 
@@ -182,7 +209,6 @@
       align-items: center;
       justify-content: end;
       width: 30%;
-  
 
       button {
         background: none;
@@ -195,41 +221,5 @@
         font-weight: lighter;
       }
     }
-  }
-}
-
-/**** RESPONSIVE ****/
-/*** Partie des étapes ***/
-@media (min-width: 720px) {
-  .container-fonctionnement .container-steps {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: auto;
-
-    p {
-      font-size: 14px;
-    
-    }
-
-    i {
-      margin-left: 15px;
-    }
-  }
-}
-
-/*** Partie des cartes du restaurant ***/
-@media (min-width: 720px) {
-  #container-restaurants .container-cards-restaurant {
-    flex-direction: row;
-  }
-}
-
-
-@media (min-width: 1155px) {
-  #container-restaurants .container-cards-restaurant {
-    flex-direction: row;
   }
 }
