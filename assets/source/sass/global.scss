@@ -39,6 +39,10 @@ footer {
   background: #353535;
   color: #ffffff;
 
+    a {
+      color: white;
+    }
+
   @media screen and (min-width: 1024px) {
     display: flex;
     flex-direction: row-reverse;

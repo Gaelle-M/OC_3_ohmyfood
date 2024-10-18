@@ -59,12 +59,14 @@
     padding: 60px 0;
 
     h2 {
-        margin-left: 25px;
+        max-width: 200px;
+        margin: 20px;
     }
 
     .container-steps {
         margin-top: 30px;
         @include center;
+        flex-direction: column;
         flex-wrap: wrap;
         padding: 0 20px;
         gap: 40px;
@@ -81,11 +83,12 @@
         @include center;
         gap: 20px;
         background: #f6f6f6;
-        width: 320px;
-        height: 70px;
+        max-width: 320px;
         border-radius: 20px;
         box-shadow: 0 4px 15px 0 #00000026;
         position: relative;
+        flex: 1;
+        padding: 25px 40px;
     }
 
     .circle-number {
@@ -129,14 +132,23 @@
         flex-direction: column;
         gap: 40px;
         padding: 0 20px;
+        max-width: 1080px;
+        margin: 0 auto;
 
-        @media screen and (min-width: 769px) {
+        @media screen and (min-width: 1024px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
+            grid-gap: 30px 10px;
+        }
+        @media screen and (min-width: 1200px) {
+            grid-gap: 50px 80px;
         }
 
         a {
+
+            position: relative;
+            z-index: 1;
+
             @media screen and (min-width: 769px) {
                 display: flex;
                 align-items: center;
@@ -214,17 +226,22 @@
                 background: none;
                 border: none;
                 cursor: pointer;
+
             }
             i {
                 margin-right: 13px;
                 font-size: 22px;
                 font-weight: lighter;
+                position: absolute;
+                z-index: 2;
+                right: 0;
 
-                &:hover,
-                &:active {
-                  border: none;
-                  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                  transition: all 0.3s ease-in-out;
+                &:active,
+                &:hover {
+
+                    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+                    background-clip: text;
+                    color: transparent;
                 }
             }
         }
