@@ -86,11 +86,7 @@ main {
                 align-items: center;
                 padding: 15px;
                 position: relative;
-
-                :active {
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
-                }
+                cursor: pointer;
 
                 :active + .check {
                     opacity: 1;

@@ -201,10 +201,7 @@ main .container-main .container-menus .container-plats {
   align-items: center;
   padding: 15px;
   position: relative;
-}
-main .container-main .container-menus .container-plats :active {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  cursor: pointer;
 }
 main .container-main .container-menus .container-plats :active + .check {
   opacity: 1;
