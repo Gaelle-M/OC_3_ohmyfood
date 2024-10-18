@@ -56,208 +56,217 @@
 
 /** FONCTIONNEMENT **/
 .container-principal-fonctionnement {
-           
-         @include center;
-         flex-direction: column;
+    @include center;
+    flex-direction: column;
 
-  .container-fonctionnement {
-    padding: 60px;
+    .container-fonctionnement {
+        padding: 60px;
 
-
-    h2 {
-        max-width: 200px;
-    }
-
-    .container-steps {
-        margin-top: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 40px;
-
-        @media screen and (min-width: 720px) {
-            flex-direction: column;
+        h2 {
+            max-width: 200px;
         }
-        @media screen and (min-width: 1024px) {
+
+        .container-steps {
+            margin-top: 30px;
             display: flex;
-            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            @media screen and (min-width: 720px) {
+                flex-direction: column;
+            }
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        .step-fonctionnement {
+            @include center;
+            gap: 20px;
+            background: #f6f6f6;
+            max-width: 320px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px 0 #00000026;
+            position: relative;
+            flex: 1;
+            padding: 25px;
+
+            @media screen and (min-width: 1024px) {
+                width: 400px;
+            }
+        }
+
+        .circle-number {
+            @include center;
+            background: $color-purple;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            color: white;
+            position: absolute;
+            left: -12px;
+            top: calc(50% - (25px / 2));
+        }
+
+        i {
+            color: #7e7e7e;
+        }
+
+        .fa-store {
+            color: $color-purple;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 600;
         }
     }
-    .step-fonctionnement {
-        @include center;
-        gap: 20px;
-        background: #f6f6f6;
-        max-width: 320px;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px 0 #00000026;
-        position: relative;
-        flex: 1;
-        padding: 25px;
-
-        @media screen and (min-width: 1024px) {
-            width: 400px;
-        }
-    }
-
-    .circle-number {
-        @include center;
-        background: $color-purple;
-        width: 25px;
-        height: 25px;
-        border-radius: 50px;
-        color: white;
-        position: absolute;
-        left: -12px;
-        top: calc(50% - (25px / 2));
-    }
-
-    i {
-        color: #7e7e7e;
-    }
-
-    .fa-store {
-        color: $color-purple;
-    }
-
-    p {
-        font-size: 16px;
-        font-weight: 600;
-    }
- }
 }
 
 /** RESTAURANT **/
 .container-principal-restaurant {
-       
     @include center;
     background: #f3f3f3;
 
     #container-restaurants {
         margin-bottom: 40px;
-    h2 {
-        font-size: 24px;
-        margin: 30px 0;
-    }
-
-    .container-cards-restaurant {
-        @include center;
-        flex-direction: column;
-        gap: 40px;
-        max-width: 1080px;
-        
-
-        @media screen and (min-width: 1024px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 30px 10px;
-        }
-        @media screen and (min-width: 1200px) {
-            grid-gap: 50px 80px;
+        h2 {
+            font-size: 24px;
+            margin: 30px 0;
         }
 
-        a {
+        .container-cards-restaurant {
+            @include center;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1080px;
 
+            @media screen and (min-width: 1024px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 30px 10px;
+            }
+            @media screen and (min-width: 1200px) {
+                grid-gap: 50px 80px;
+            }
+
+            a {
+                position: relative;
+                z-index: 1;
+
+                @media screen and (min-width: 769px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .card-restaurant {
+            background: #ffffff;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px 0 #0000001a;
             position: relative;
-            z-index: 1;
+            width: 300px;
+            max-width: 490px;
 
-            @media screen and (min-width: 769px) {
+            @media screen and (min-width: 375px) {
+                width: 350px;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 490px;
+            }
+        }
+        .container-img {
+            display: flex;
+
+            img {
+                width: 100%;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 230px;
+                object-fit: cover;
+            }
+
+            .nouveau {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: $color-light-green;
+                width: 80px;
+                height: 30px;
+                @include center;
+                border-radius: 2px;
+                font-size: 14px;
+                color: #008766;
+                font-weight: 600;
+            }
+        }
+
+        .container-card-bottom {
+            display: flex;
+            padding: 10px 0;
+            position: relative;
+
+            .container-text {
+                margin-left: 13px;
+                width: 70%;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+
+            .container-icon {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-            }
-        }
-    }
+                justify-content: end;
+                width: 30%;
 
-    .card-restaurant {
-        background: #ffffff;
-        height: auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px 0 #0000001a;
-        position: relative;
-        width: 300px;
-        max-width: 490px;
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
 
-        @media screen and (min-width: 375px) {
-            width: 350px;
-        }
-        @media screen and (min-width: 1024px) {
-            width: 490px;
-        }
-    }
-    .container-img {
-        display: flex;
+                    .fa-solid {
+                       position: absolute;
+                       right: 15px;
+                       bottom: 22px;
+                       font-size: 25px;
+                       opacity: 0;
 
-        img {
-            width: 100%;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            height: 230px;
-            object-fit: cover;
-        }
+                        &:hover {
+                            background: linear-gradient(to bottom, #FF79DA, #9356DC);
+                            background-clip: text;
+                            color: transparent;
+                            opacity: 1;
+                        }
+                    }
 
-        .nouveau {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: $color-light-green;
-            width: 80px;
-            height: 30px;
-            @include center;
-            border-radius: 2px;
-            font-size: 14px;
-            color: #008766;
-            font-weight: 600;
-        }
-    }
+                    .fa-regular {
+                        position: absolute;
+                        right: 15px;
+                        bottom: 22px;
+                        font-size: 25px;
 
-    .container-card-bottom {
-        display: flex;
-        padding: 10px 0;
+                        &:hover {
+                            opacity: 0;
+                        }
+                    }
+                }
 
-        .container-text {
-            margin-left: 13px;
-            width: 70%;
+                   
 
-            h3 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 17px;
-            }
-        }
-
-        .container-icon {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            width: 30%;
-
-            button {
-                background: none;
-                border: none;
-                cursor: pointer;
-
-            }
-            i {
-                margin-right: 13px;
-                font-size: 22px;
-                font-weight: lighter;
-                position: absolute;
-                z-index: 2;
-                right: 0;
-
-                &:active,
-                &:hover {
-
-                    background: linear-gradient(to bottom, #FF79DA, #9356DC);
-                    background-clip: text;
-                    color: transparent;
                 }
             }
         }
     }
-  }
-}
+

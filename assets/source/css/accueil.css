@@ -339,6 +339,7 @@ footer .container-link-nav a {
 .container-principal-restaurant #container-restaurants .container-card-bottom {
   display: flex;
   padding: 10px 0;
+  position: relative;
 }
 .container-principal-restaurant #container-restaurants .container-card-bottom .container-text {
   margin-left: 13px;
@@ -361,18 +362,27 @@ footer .container-link-nav a {
   border: none;
   cursor: pointer;
 }
-.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon i {
-  margin-right: 13px;
-  font-size: 22px;
-  font-weight: lighter;
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-solid {
   position: absolute;
-  z-index: 2;
-  right: 0;
+  right: 15px;
+  bottom: 22px;
+  font-size: 25px;
+  opacity: 0;
 }
-.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon i:active, .container-principal-restaurant #container-restaurants .container-card-bottom .container-icon i:hover {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-solid:hover {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
+  opacity: 1;
+}
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-regular {
+  position: absolute;
+  right: 15px;
+  bottom: 22px;
+  font-size: 25px;
+}
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-regular:hover {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=accueil.css.map */

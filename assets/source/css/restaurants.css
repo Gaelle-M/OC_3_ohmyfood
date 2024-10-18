@@ -162,16 +162,38 @@ main .container-main {
 main .container-main .container-title-restaurant {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 main .container-main .container-title-restaurant h1 {
   font-family: "font-title", sans-serif;
+  font-size: 25px;
 }
 main .container-main .container-title-restaurant button {
+  background: none;
   border: none;
-  background: #f6f6f6;
+  cursor: pointer;
 }
-main .container-main .container-title-restaurant i {
-  font-size: 28px;
+main .container-main .container-title-restaurant button .fa-regular {
+  font-size: 25px;
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+}
+main .container-main .container-title-restaurant button .fa-regular:hover {
+  opacity: 0;
+}
+main .container-main .container-title-restaurant button .fa-solid {
+  font-size: 26px;
+  opacity: 0;
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+}
+main .container-main .container-title-restaurant button .fa-solid:hover {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
 }
 main .container-main .container-menus {
   display: flex;
@@ -203,7 +225,7 @@ main .container-main .container-menus .container-plats {
   position: relative;
   cursor: pointer;
 }
-main .container-main .container-menus .container-plats :active + .check {
+main .container-main .container-menus .container-plats :hover + .check {
   display: flex;
   justify-content: center;
   align-items: center;
