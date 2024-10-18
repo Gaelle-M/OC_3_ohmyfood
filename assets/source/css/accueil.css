@@ -173,35 +173,39 @@ footer .container-link-nav a {
 }
 
 /** FONCTIONNEMENT **/
-.container-fonctionnement {
-  padding: 60px 0;
-}
-.container-fonctionnement h2 {
-  max-width: 200px;
-  margin: 20px;
-}
-.container-fonctionnement .container-steps {
-  margin-top: 30px;
+.container-principal-fonctionnement {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.container-principal-fonctionnement .container-fonctionnement {
+  padding: 60px;
+}
+.container-principal-fonctionnement .container-fonctionnement h2 {
+  max-width: 200px;
+}
+.container-principal-fonctionnement .container-fonctionnement .container-steps {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 20px;
   gap: 40px;
 }
 @media screen and (min-width: 720px) {
-  .container-fonctionnement .container-steps {
+  .container-principal-fonctionnement .container-fonctionnement .container-steps {
     flex-direction: column;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container-fonctionnement .container-steps {
+  .container-principal-fonctionnement .container-fonctionnement .container-steps {
     display: flex;
     flex-direction: row;
   }
 }
-.container-fonctionnement .step-fonctionnement {
+.container-principal-fonctionnement .container-fonctionnement .step-fonctionnement {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,9 +216,14 @@ footer .container-link-nav a {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
   position: relative;
   flex: 1;
-  padding: 25px 40px;
+  padding: 25px;
 }
-.container-fonctionnement .circle-number {
+@media screen and (min-width: 1024px) {
+  .container-principal-fonctionnement .container-fonctionnement .step-fonctionnement {
+    width: 400px;
+  }
+}
+.container-principal-fonctionnement .container-fonctionnement .circle-number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,60 +236,63 @@ footer .container-link-nav a {
   left: -12px;
   top: calc(50% - 12.5px);
 }
-.container-fonctionnement i {
+.container-principal-fonctionnement .container-fonctionnement i {
   color: #7e7e7e;
 }
-.container-fonctionnement .fa-store {
+.container-principal-fonctionnement .container-fonctionnement .fa-store {
   color: #9356dc;
 }
-.container-fonctionnement p {
+.container-principal-fonctionnement .container-fonctionnement p {
   font-size: 16px;
   font-weight: 600;
 }
 
 /** RESTAURANT **/
-#container-restaurants {
-  padding: 50px 0;
+.container-principal-restaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #f3f3f3;
 }
-#container-restaurants h2 {
-  font-size: 24px;
-  margin: 20px;
+.container-principal-restaurant #container-restaurants {
+  margin-bottom: 40px;
 }
-#container-restaurants .container-cards-restaurant {
+.container-principal-restaurant #container-restaurants h2 {
+  font-size: 24px;
+  margin: 30px 0;
+}
+.container-principal-restaurant #container-restaurants .container-cards-restaurant {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
-  padding: 0 20px;
   max-width: 1080px;
-  margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
-  #container-restaurants .container-cards-restaurant {
+  .container-principal-restaurant #container-restaurants .container-cards-restaurant {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px 10px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #container-restaurants .container-cards-restaurant {
+  .container-principal-restaurant #container-restaurants .container-cards-restaurant {
     grid-gap: 50px 80px;
   }
 }
-#container-restaurants .container-cards-restaurant a {
+.container-principal-restaurant #container-restaurants .container-cards-restaurant a {
   position: relative;
   z-index: 1;
 }
 @media screen and (min-width: 769px) {
-  #container-restaurants .container-cards-restaurant a {
+  .container-principal-restaurant #container-restaurants .container-cards-restaurant a {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-#container-restaurants .card-restaurant {
+.container-principal-restaurant #container-restaurants .card-restaurant {
   background: #ffffff;
   height: auto;
   border-radius: 15px;
@@ -290,26 +302,26 @@ footer .container-link-nav a {
   max-width: 490px;
 }
 @media screen and (min-width: 375px) {
-  #container-restaurants .card-restaurant {
+  .container-principal-restaurant #container-restaurants .card-restaurant {
     width: 350px;
   }
 }
 @media screen and (min-width: 1024px) {
-  #container-restaurants .card-restaurant {
+  .container-principal-restaurant #container-restaurants .card-restaurant {
     width: 490px;
   }
 }
-#container-restaurants .container-img {
+.container-principal-restaurant #container-restaurants .container-img {
   display: flex;
 }
-#container-restaurants .container-img img {
+.container-principal-restaurant #container-restaurants .container-img img {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 230px;
   object-fit: cover;
 }
-#container-restaurants .container-img .nouveau {
+.container-principal-restaurant #container-restaurants .container-img .nouveau {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -324,32 +336,32 @@ footer .container-link-nav a {
   color: #008766;
   font-weight: 600;
 }
-#container-restaurants .container-card-bottom {
+.container-principal-restaurant #container-restaurants .container-card-bottom {
   display: flex;
   padding: 10px 0;
 }
-#container-restaurants .container-card-bottom .container-text {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-text {
   margin-left: 13px;
   width: 70%;
 }
-#container-restaurants .container-card-bottom .container-text h3 {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-text h3 {
   font-size: 18px;
 }
-#container-restaurants .container-card-bottom .container-text p {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-text p {
   font-size: 17px;
 }
-#container-restaurants .container-card-bottom .container-icon {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon {
   display: flex;
   align-items: center;
   justify-content: end;
   width: 30%;
 }
-#container-restaurants .container-card-bottom .container-icon button {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button {
   background: none;
   border: none;
   cursor: pointer;
 }
-#container-restaurants .container-card-bottom .container-icon i {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon i {
   margin-right: 13px;
   font-size: 22px;
   font-weight: lighter;
@@ -357,7 +369,7 @@ footer .container-link-nav a {
   z-index: 2;
   right: 0;
 }
-#container-restaurants .container-card-bottom .container-icon i:active, #container-restaurants .container-card-bottom .container-icon i:hover {
+.container-principal-restaurant #container-restaurants .container-card-bottom .container-icon i:active, .container-principal-restaurant #container-restaurants .container-card-bottom .container-icon i:hover {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-clip: text;
   color: transparent;

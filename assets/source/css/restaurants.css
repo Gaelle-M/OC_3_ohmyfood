@@ -204,7 +204,9 @@ main .container-main .container-menus .container-plats {
   cursor: pointer;
 }
 main .container-main .container-menus .container-plats :active + .check {
-  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .container-main .container-menus .container-plats h3 {
   font-size: 15px;
@@ -247,10 +249,7 @@ main .container-main .container-menus .container-plats .check {
   width: 50px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   background: #99e2d0;
 }
 main .container-main .container-menus .container-plats .check i {

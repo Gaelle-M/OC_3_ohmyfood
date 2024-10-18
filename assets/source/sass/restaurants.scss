@@ -89,7 +89,7 @@ main {
                 cursor: pointer;
 
                 :active + .check {
-                    opacity: 1;
+                    @include center;
                 }
 
                 h3 {
@@ -133,8 +133,7 @@ main {
                     width: 50px;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
-                    opacity: 0;
-                    @include center;
+                    display: none;
                     background: $color-light-green;
 
                     i {
