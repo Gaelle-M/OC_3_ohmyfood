@@ -166,7 +166,7 @@ footer .container-link-nav a {
 }
 header a {
   position: relative;
-  right: 20%;
+  left: -10%;
 }
 header i {
   font-size: 28px;
