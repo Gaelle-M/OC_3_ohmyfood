@@ -99,31 +99,31 @@ main {
                 animation: slideInLeft 0.8s forwards;
 
                 &:nth-child(1) {
-                    animation-delay: 0.3s; /* Première entrée */
+                    animation-delay: 0.3s;
                 }
                 &:nth-child(2) {
-                    animation-delay: 0.6s; /* Deuxième entrée */
+                    animation-delay: 0.6s; 
                 }
                 &:nth-child(3) {
-                    animation-delay: 0.9s; /* Troisième entrée */
+                    animation-delay: 0.9s;
                 }
                 &:nth-child(4) {
-                    animation-delay: 1.2s; /* Premier plat */
+                    animation-delay: 1.2s; 
                 }
                 &:nth-child(5) {
-                    animation-delay: 1.5s; /* Deuxième plat */
+                    animation-delay: 1.5s; 
                 }
                 &:nth-child(6) {
-                    animation-delay: 1.8s; /* Troisième plat */
+                    animation-delay: 1.8s; 
                 }
                 &:nth-child(7) {
-                    animation-delay: 2.1s; /* Premier dessert */
+                    animation-delay: 2.1s; 
                 }
                 &:nth-child(8) {
-                    animation-delay: 2.4s; /* Deuxième dessert */
+                    animation-delay: 2.4s; 
                 }
                 &:nth-child(9) {
-                    animation-delay: 2.7s; /* Troisième dessert */
+                    animation-delay: 2.7s; 
                 }
                 
 

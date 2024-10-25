@@ -243,31 +243,31 @@ main .container-main .container-menus .container-plats {
   animation: slideInLeft 0.8s forwards;
 }
 main .container-main .container-menus .container-plats:nth-child(1) {
-  animation-delay: 0.3s; /* Première entrée */
+  animation-delay: 0.3s;
 }
 main .container-main .container-menus .container-plats:nth-child(2) {
-  animation-delay: 0.6s; /* Deuxième entrée */
+  animation-delay: 0.6s;
 }
 main .container-main .container-menus .container-plats:nth-child(3) {
-  animation-delay: 0.9s; /* Troisième entrée */
+  animation-delay: 0.9s;
 }
 main .container-main .container-menus .container-plats:nth-child(4) {
-  animation-delay: 1.2s; /* Premier plat */
+  animation-delay: 1.2s;
 }
 main .container-main .container-menus .container-plats:nth-child(5) {
-  animation-delay: 1.5s; /* Deuxième plat */
+  animation-delay: 1.5s;
 }
 main .container-main .container-menus .container-plats:nth-child(6) {
-  animation-delay: 1.8s; /* Troisième plat */
+  animation-delay: 1.8s;
 }
 main .container-main .container-menus .container-plats:nth-child(7) {
-  animation-delay: 2.1s; /* Premier dessert */
+  animation-delay: 2.1s;
 }
 main .container-main .container-menus .container-plats:nth-child(8) {
-  animation-delay: 2.4s; /* Deuxième dessert */
+  animation-delay: 2.4s;
 }
 main .container-main .container-menus .container-plats:nth-child(9) {
-  animation-delay: 2.7s; /* Troisième dessert */
+  animation-delay: 2.7s;
 }
 main .container-main .container-menus .container-plats :hover + .fa-circle-check {
   display: flex;
