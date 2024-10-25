@@ -56,6 +56,36 @@ header img {
   cursor: pointer;
 }
 
+/*** Animation des coeurs ***/
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+button .fa-regular {
+  font-size: 25px;
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+}
+button .fa-regular:hover {
+  opacity: 0;
+}
+button .fa-solid {
+  font-size: 25px;
+  opacity: 0;
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+}
+button .fa-solid:hover {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: 0.3;
+}
+
 /** FOOTER **/
 footer {
   background: #353535;
@@ -374,6 +404,7 @@ footer .container-link-nav a {
   background-clip: text;
   color: transparent;
   opacity: 1;
+  transition: 0.3s;
 }
 .container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-regular {
   position: absolute;

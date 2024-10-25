@@ -56,6 +56,36 @@ header img {
   cursor: pointer;
 }
 
+/*** Animation des coeurs ***/
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+button .fa-regular {
+  font-size: 25px;
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+}
+button .fa-regular:hover {
+  opacity: 0;
+}
+button .fa-solid {
+  font-size: 25px;
+  opacity: 0;
+  bottom: 10px;
+  right: 0;
+  position: absolute;
+}
+button .fa-solid:hover {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: 0.3;
+}
+
 /** FOOTER **/
 footer {
   background: #353535;
@@ -168,33 +198,6 @@ main .container-main .container-title-restaurant h1 {
   font-family: "font-title", sans-serif;
   font-size: 25px;
 }
-main .container-main .container-title-restaurant button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-main .container-main .container-title-restaurant button .fa-regular {
-  font-size: 25px;
-  bottom: 10px;
-  right: 0;
-  position: absolute;
-}
-main .container-main .container-title-restaurant button .fa-regular:hover {
-  opacity: 0;
-}
-main .container-main .container-title-restaurant button .fa-solid {
-  font-size: 26px;
-  opacity: 0;
-  bottom: 10px;
-  right: 0;
-  position: absolute;
-}
-main .container-main .container-title-restaurant button .fa-solid:hover {
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-  opacity: 1;
-}
 main .container-main .container-menus {
   display: flex;
   flex-direction: column;
@@ -217,7 +220,6 @@ main .container-main .container-menus .container-plats {
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1019607843);
-  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,20 +227,23 @@ main .container-main .container-menus .container-plats {
   position: relative;
   cursor: pointer;
 }
-main .container-main .container-menus .container-plats :hover + .check {
+main .container-main .container-menus .container-plats :hover + .fa-circle-check {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-main .container-main .container-menus .container-plats h3 {
-  font-size: 15px;
+main .container-main .container-menus .container-plats .plat-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+main .container-main .container-menus .container-plats .plat-content h3 {
+  font-size: 17px;
 }
 @media screen and (min-width: 1024px) {
-  main .container-main .container-menus .container-plats h3 {
+  main .container-main .container-menus .container-plats .plat-content h3 {
     font-size: 18px;
   }
 }
-main .container-main .container-menus .container-plats p {
+main .container-main .container-menus .container-plats .plat-content p {
   font-size: 14px;
   width: 100px;
   white-space: nowrap;
@@ -246,37 +251,35 @@ main .container-main .container-menus .container-plats p {
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 375px) {
-  main .container-main .container-menus .container-plats p {
+  main .container-main .container-menus .container-plats .plat-content p {
     width: 150px;
   }
 }
 @media screen and (min-width: 768px) {
-  main .container-main .container-menus .container-plats p {
+  main .container-main .container-menus .container-plats .plat-content p {
     width: 300px;
   }
 }
-main .container-main .container-menus .container-plats .container-prix {
-  font-weight: 700;
-  margin-right: 10px;
-}
-main .container-main .container-menus .container-plats .container-prix p {
+main .container-main .container-menus .container-plats .plat-content .container-prix {
   display: flex;
   justify-content: flex-end;
   font-size: 14px;
+  font-weight: 700;
+  margin-right: 10px;
 }
-main .container-main .container-menus .container-plats .check {
-  position: absolute;
-  left: 100%;
+main .container-main .container-menus .fa-circle-check {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 28px;
+  background: #99e2d0;
   height: 100%;
   width: 50px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  display: none;
-  background: #99e2d0;
-}
-main .container-main .container-menus .container-plats .check i {
-  color: #fff;
-  font-size: 28px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .container-btn {
   display: flex;

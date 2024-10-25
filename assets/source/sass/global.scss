@@ -34,6 +34,42 @@ header {
   }
 }
 
+/*** Animation des coeurs ***/
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  .fa-regular {
+      font-size: 25px;
+      bottom: 10px;
+      right: 0;
+      position: absolute;
+
+      &:hover {
+          opacity: 0;
+      }
+  }
+
+  .fa-solid {
+     font-size: 25px;
+     opacity: 0;
+     bottom: 10px;
+     right: 0;
+     position: absolute;
+
+      &:hover {
+          background: linear-gradient(to bottom, #FF79DA, #9356DC);
+          background-clip: text;
+          color: transparent;
+          opacity: 1;
+          transition: 0.3;
+      }
+  }
+
+}
+
+
 /** FOOTER **/
 footer {
   background: #353535;
