@@ -50,6 +50,10 @@ button {
       &:hover {
           opacity: 0;
       }
+
+      @media screen and (min-width: 1024px) {
+        right: 20%;
+      }
   }
 
   .fa-solid {
@@ -58,13 +62,19 @@ button {
      bottom: 10px;
      right: 0;
      position: absolute;
+     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+     background: linear-gradient(to bottom, #FF79DA, #9356DC);
+     -webkit-background-clip: text; 
+     color: transparent;
+     
 
       &:hover {
-          background: linear-gradient(to bottom, #FF79DA, #9356DC);
-          background-clip: text;
-          color: transparent;
           opacity: 1;
-          transition: 0.3;
+        
+      }
+
+          @media screen and (min-width: 1024px) {
+            right: 20%;
       }
   }
 

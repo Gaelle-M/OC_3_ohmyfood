@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    animation: fadeOut 3s forwards;
+    animation: fadeOut 4s forwards;
   
     .background {
       position: absolute; 
@@ -20,7 +20,7 @@
       left: 0;
       width: 100%; 
       height: 100%; 
-      background-color: rgba(255, 255, 255, 0.952); 
+      background-color: #fff; 
     }
   
     .spinner {
@@ -78,9 +78,12 @@
     0% {
       opacity: 1; 
     }
+    50% {
+      opacity: 1; 
+    }
     100% {
-      opacity: 0; 
-      visibility: hidden; 
+        opacity: 0;
+        visibility: hidden;
     }
   }
 
@@ -320,18 +323,18 @@
                     cursor: pointer;
 
                     .fa-solid {
-                        position: absolute;
-                        right: 15px;
-                        bottom: 22px;
                         font-size: 25px;
                         opacity: 0;
+                        right: 15px;
+                        bottom: 22px;
+                        position: absolute;
+                        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+                        background: linear-gradient(to bottom, #FF79DA, #9356DC);
+                        -webkit-background-clip: text; 
+                        color: transparent;
 
                         &:hover {
-                            background: linear-gradient(to bottom, #FF79DA, #9356DC);
-                            background-clip: text;
-                            color: transparent;
                             opacity: 1;
-                            transition: 0.3s;
                         }
                     }
 

@@ -72,19 +72,29 @@ button .fa-regular {
 button .fa-regular:hover {
   opacity: 0;
 }
+@media screen and (min-width: 1024px) {
+  button .fa-regular {
+    right: 20%;
+  }
+}
 button .fa-solid {
   font-size: 25px;
   opacity: 0;
   bottom: 10px;
   right: 0;
   position: absolute;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 button .fa-solid:hover {
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
   opacity: 1;
-  transition: 0.3;
+}
+@media screen and (min-width: 1024px) {
+  button .fa-solid {
+    right: 20%;
+  }
 }
 
 /** FOOTER **/
@@ -163,7 +173,7 @@ footer .container-link-nav a {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeOut 3s forwards;
+  animation: fadeOut 4s forwards;
 }
 .loader .background {
   position: absolute;
@@ -171,7 +181,7 @@ footer .container-link-nav a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.952);
+  background-color: #fff;
 }
 .loader .spinner {
   position: relative;
@@ -217,6 +227,9 @@ footer .container-link-nav a {
 }
 @keyframes fadeOut {
   0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
@@ -466,18 +479,18 @@ footer .container-link-nav a {
   cursor: pointer;
 }
 .container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-solid {
-  position: absolute;
-  right: 15px;
-  bottom: 22px;
   font-size: 25px;
   opacity: 0;
+  right: 15px;
+  bottom: 22px;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-solid:hover {
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
   opacity: 1;
-  transition: 0.3s;
 }
 .container-principal-restaurant #container-restaurants .container-card-bottom .container-icon button .fa-regular {
   position: absolute;

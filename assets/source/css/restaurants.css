@@ -73,19 +73,29 @@ button .fa-regular {
 button .fa-regular:hover {
   opacity: 0;
 }
+@media screen and (min-width: 1024px) {
+  button .fa-regular {
+    right: 20%;
+  }
+}
 button .fa-solid {
   font-size: 25px;
   opacity: 0;
   bottom: 10px;
   right: 0;
   position: absolute;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 button .fa-solid:hover {
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
   opacity: 1;
-  transition: 0.3;
+}
+@media screen and (min-width: 1024px) {
+  button .fa-solid {
+    right: 20%;
+  }
 }
 
 /** FOOTER **/
@@ -168,6 +178,16 @@ header a {
   position: relative;
   left: -10%;
 }
+@media screen and (min-width: 768px) {
+  header a {
+    left: -30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header a {
+    left: -37%;
+  }
+}
 header i {
   font-size: 28px;
 }
@@ -181,7 +201,7 @@ header i {
 }
 
 main {
-  padding: 20px;
+  padding: 20px 10px;
   background: #f6f6f6;
   z-index: 3;
   margin-top: -90px;
@@ -194,9 +214,7 @@ main {
     margin: -90px auto 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px 200px;
   }
 }
 main .container-main {
@@ -206,6 +224,13 @@ main .container-main .container-title-restaurant {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+@media screen and (min-width: 1024px) {
+  main .container-main .container-title-restaurant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 main .container-main .container-title-restaurant h1 {
   font-family: "font-title", sans-serif;
@@ -231,12 +256,13 @@ main .container-main .container-menus span {
 }
 main .container-main .container-menus .container-plats {
   background: #ffffff;
+  padding-left: 15px;
   border-radius: 15px;
   box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1019607843);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  height: 69px;
   position: relative;
   cursor: pointer;
   opacity: 0;
@@ -270,22 +296,25 @@ main .container-main .container-menus .container-plats:nth-child(9) {
   animation-delay: 2.7s;
 }
 main .container-main .container-menus .container-plats :hover + .fa-circle-check {
-  visibility: visible;
+  opacity: 1;
 }
 main .container-main .container-menus .container-plats .plat-content {
   display: flex;
   align-items: center;
   flex-grow: 1;
 }
-main .container-main .container-menus .container-plats .plat-content h3 {
+main .container-main .container-menus .container-plats .plat-content .container-text {
+  width: 100%;
+}
+main .container-main .container-menus .container-plats .plat-content .container-text h3 {
   font-size: 17px;
 }
 @media screen and (min-width: 1024px) {
-  main .container-main .container-menus .container-plats .plat-content h3 {
+  main .container-main .container-menus .container-plats .plat-content .container-text h3 {
     font-size: 18px;
   }
 }
-main .container-main .container-menus .container-plats .plat-content p {
+main .container-main .container-menus .container-plats .plat-content .container-text p {
   font-size: 14px;
   width: 100px;
   white-space: nowrap;
@@ -293,12 +322,12 @@ main .container-main .container-menus .container-plats .plat-content p {
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 375px) {
-  main .container-main .container-menus .container-plats .plat-content p {
+  main .container-main .container-menus .container-plats .plat-content .container-text p {
     width: 150px;
   }
 }
 @media screen and (min-width: 768px) {
-  main .container-main .container-menus .container-plats .plat-content p {
+  main .container-main .container-menus .container-plats .plat-content .container-text p {
     width: 300px;
   }
 }
@@ -310,7 +339,6 @@ main .container-main .container-menus .container-plats .plat-content .container-
   margin-right: 10px;
 }
 main .container-main .container-menus .fa-circle-check {
-  margin-right: 10px;
   color: #fff;
   font-size: 28px;
   background: #99e2d0;
@@ -322,7 +350,7 @@ main .container-main .container-menus .fa-circle-check {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
+  opacity: 0;
 }
 main .container-btn {
   display: flex;
