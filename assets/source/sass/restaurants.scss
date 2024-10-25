@@ -138,6 +138,7 @@ main {
                  border-bottom-right-radius: 10px;
                  padding: 5px;
                  @include center;
+                 display: none;
             }
         }
     }
