@@ -270,7 +270,7 @@ main .container-main .container-menus .container-plats:nth-child(9) {
   animation-delay: 2.7s;
 }
 main .container-main .container-menus .container-plats :hover + .fa-circle-check {
-  display: flex;
+  visibility: visible;
 }
 main .container-main .container-menus .container-plats .plat-content {
   display: flex;
@@ -322,7 +322,7 @@ main .container-main .container-menus .fa-circle-check {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  visibility: hidden;
 }
 main .container-btn {
   display: flex;

@@ -128,7 +128,7 @@ main {
                 
 
                 :hover + .fa-circle-check{
-                    display: flex;
+                    visibility: visible;
                 }
             
                 .plat-content {
@@ -181,7 +181,7 @@ main {
                  border-bottom-right-radius: 10px;
                  padding: 5px;
                  @include center;
-                 display: none;
+                 visibility: hidden;
             }
         }
     }
