@@ -22,7 +22,7 @@ a {
   color: black;
 }
 
-/** HEADER **/
+/**HEADER**/
 header {
   display: flex;
   align-items: center;
@@ -37,19 +37,20 @@ header img {
   margin: 14px;
 }
 
-/** BOUTONS**/
+/**BOUTONS**/
 .btn {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
-  margin-bottom: 20px;
+  margin: 50px 0 20px;
   color: white;
   font-size: 16px;
   font-weight: 500;
   padding: 13px 18px;
   transition: 0.3s all;
   width: 200px;
+  text-align: center;
 }
 .btn:hover {
   opacity: 0.8;
@@ -113,7 +114,7 @@ footer a {
 }
 footer h4 {
   font-family: "font-title", sans-serif;
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 400;
   padding: 22px 25px;
   gap: 16px;
@@ -159,7 +160,7 @@ footer .container-link-nav {
 }
 footer .container-link-nav a {
   color: white;
-  font-style: 16px;
+  font-size: 16px;
 }
 
 /*** LOADER ***/

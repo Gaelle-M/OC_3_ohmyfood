@@ -1,4 +1,4 @@
-/** HEADER **/
+/**HEADER**/
 header {
   display: flex;
   align-items: center;
@@ -14,19 +14,20 @@ header {
   }
 }
 
-/** BOUTONS**/
+/**BOUTONS**/
 .btn {
   background: linear-gradient(193.33deg, $color-purple -11.44%, $color-pink 123.93%);
   border: none;
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 #00000040;
-  margin-bottom: 20px;
+  margin: 50px 0 20px;
   color: white;
   font-size: 16px;
   font-weight: 500;
   padding: 13px 18px;
   transition: 0.3s all;
   width: 200px;
+  text-align: center;
 
   &:hover {
     opacity: 0.8;
@@ -95,7 +96,7 @@ footer {
 
   h4 {
     font-family: $font-title;
-    font-style: 18px;
+    font-size: 18px;
     font-weight: 400;
     padding: 22px 25px;
     gap: 16px;
@@ -141,7 +142,7 @@ footer {
 
     a {
       color: white;
-      font-style: 16px;
+      font-size: 16px;
     }
   }
 }
