@@ -282,6 +282,8 @@ main .container-main .container-menus .container-plats:nth-child(9) {
 }
 main .container-main .container-menus .container-plats :hover + .fa-circle-check {
   opacity: 1;
+  margin-right: 60px;
+  transition: margin-right 0.3s ease-in-out;
 }
 main .container-main .container-menus .container-plats .plat-content {
   display: flex;
@@ -292,6 +294,10 @@ main .container-main .container-menus .container-plats .plat-content {
   border-radius: 15px;
   height: 70px;
   box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1019607843);
+}
+main .container-main .container-menus .container-plats .plat-content:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 main .container-main .container-menus .container-plats .plat-content .container-text {
   width: 100%;
@@ -341,6 +347,7 @@ main .container-main .container-menus .fa-circle-check {
   justify-content: center;
   align-items: center;
   opacity: 0;
+  transition: margin-right 0.5s ease-in-out;
 }
 main .container-btn {
   display: flex;

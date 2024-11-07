@@ -135,9 +135,9 @@ main {
 
                 :hover + .fa-circle-check {
                     opacity: 1;
+                    margin-right: 60px;
+                    transition: margin-right 0.3s ease-in-out;
                 }
-                
-                
 
                 .plat-content {
                     display: flex;
@@ -148,6 +148,11 @@ main {
                     border-radius: 15px;
                     height: 70px;
                     box-shadow: 0 4.01px 15.04px 0 #0000001a;
+
+                    &:hover {
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
 
                     .container-text {
                         width: 100%;
@@ -197,6 +202,8 @@ main {
                 padding: 20px;
                 @include center;
                 opacity: 0;
+                
+                transition: margin-right 0.5s ease-in-out;
             }
         }
     }
