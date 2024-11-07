@@ -7,6 +7,7 @@
   font-family: "font-text";
   src: url(../../fonts/Roboto-Regular.ttf);
 }
+/** GENERAL SETTING **/
 * {
   margin: 0;
   padding: 0;
@@ -60,43 +61,31 @@ header img {
 }
 
 /*** Animation des coeurs ***/
-button {
+.container-icon .button-heart {
   background: none;
   border: none;
   cursor: pointer;
 }
-button .fa-regular {
+.container-icon .fa-regular {
   font-size: 25px;
-  bottom: 10px;
-  right: 0;
+  right: 10px;
   position: absolute;
 }
-button .fa-regular:hover {
+.container-icon .fa-regular:hover {
   opacity: 0;
 }
-@media screen and (min-width: 1024px) {
-  button .fa-regular {
-    right: 20%;
-  }
-}
-button .fa-solid {
+.container-icon .fa-solid {
   font-size: 25px;
   opacity: 0;
-  bottom: 10px;
-  right: 0;
+  right: 10px;
   position: absolute;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
   -webkit-background-clip: text;
   color: transparent;
 }
-button .fa-solid:hover {
+.container-icon .fa-solid:hover {
   opacity: 1;
-}
-@media screen and (min-width: 1024px) {
-  button .fa-solid {
-    right: 20%;
-  }
 }
 
 /** FOOTER **/
@@ -189,7 +178,7 @@ header a {
     left: -37%;
   }
 }
-header i {
+header .fa-arrow-left {
   font-size: 28px;
 }
 
@@ -230,12 +219,12 @@ main .container-main .container-title-restaurant {
   main .container-main .container-title-restaurant {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
 main .container-main .container-title-restaurant h1 {
   font-family: "font-title", sans-serif;
   font-size: 25px;
+  font-weight: 400;
 }
 main .container-main .container-menus {
   display: flex;
@@ -256,14 +245,9 @@ main .container-main .container-menus span {
   margin-top: -10px;
 }
 main .container-main .container-menus .container-plats {
-  background: #ffffff;
-  padding-left: 15px;
-  border-radius: 15px;
-  box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1019607843);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 69px;
   position: relative;
   cursor: pointer;
   opacity: 0;
@@ -303,6 +287,11 @@ main .container-main .container-menus .container-plats .plat-content {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  background: #ffffff;
+  padding-left: 15px;
+  border-radius: 15px;
+  height: 70px;
+  box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1019607843);
 }
 main .container-main .container-menus .container-plats .plat-content .container-text {
   width: 100%;
@@ -347,7 +336,7 @@ main .container-main .container-menus .fa-circle-check {
   width: 50px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 5px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

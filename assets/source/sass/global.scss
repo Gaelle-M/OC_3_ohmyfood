@@ -1,3 +1,20 @@
+/** GENERAL SETTING **/ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-text;
+}
+
+a {
+  color: black;
+}
+
 /**HEADER**/
 header {
   display: flex;
@@ -37,35 +54,30 @@ header {
 }
 
 /*** Animation des coeurs ***/
-button {
+.container-icon {
+.button-heart {
   background: none;
   border: none;
   cursor: pointer;
-
+}
   .fa-regular {
     font-size: 25px;
-    bottom: 10px;
-    right: 0;
+    right: 10px;
     position: absolute;
 
     &:hover {
       opacity: 0;
-    }
-
-    @media screen and (min-width: 1024px) {
-      right: 20%;
     }
   }
 
   .fa-solid {
     font-size: 25px;
     opacity: 0;
-    bottom: 10px;
-    right: 0;
+    right: 10px;
     position: absolute;
     transition:
-      opacity 0.5s ease-in-out,
-      transform 0.5s ease-in-out;
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
     background: linear-gradient(to bottom, #ff79da, #9356dc);
     -webkit-background-clip: text;
     color: transparent;
@@ -73,12 +85,9 @@ button {
     &:hover {
       opacity: 1;
     }
-
-    @media screen and (min-width: 1024px) {
-      right: 20%;
-    }
   }
 }
+
 
 /** FOOTER **/
 footer {

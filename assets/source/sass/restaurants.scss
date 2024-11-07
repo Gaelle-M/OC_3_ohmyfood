@@ -25,13 +25,12 @@ header {
             left: -37%;
         }
     }
-    i {
+    .fa-arrow-left {
         font-size: 28px;
     }
 }
 
 .container-img {
-
     img {
         object-fit: cover;
         width: 100%;
@@ -66,12 +65,14 @@ main {
             position: relative;
 
             @media screen and (min-width: 1024px) {
-                @include center;
+                display: flex;
+                justify-content: center;
             }
 
             h1 {
                 font-family: $font-title;
                 font-size: 25px;
+                font-weight: 400;
             }
         }
 
@@ -96,14 +97,9 @@ main {
             }
 
             .container-plats {
-                background: #ffffff;
-                padding-left: 15px;
-                border-radius: 15px;
-                box-shadow: 0 4.01px 15.04px 0 #0000001a;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                height: 69px;
                 position: relative;
                 cursor: pointer;
                 opacity: 0;
@@ -140,11 +136,18 @@ main {
                 :hover + .fa-circle-check {
                     opacity: 1;
                 }
+                
+                
 
                 .plat-content {
                     display: flex;
                     align-items: center;
                     flex-grow: 1;
+                    background: #ffffff;
+                    padding-left: 15px;
+                    border-radius: 15px;
+                    height: 70px;
+                    box-shadow: 0 4.01px 15.04px 0 #0000001a;
 
                     .container-text {
                         width: 100%;
@@ -191,10 +194,9 @@ main {
                 width: 50px;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
-                padding: 5px;
+                padding: 20px;
                 @include center;
                 opacity: 0;
-
             }
         }
     }

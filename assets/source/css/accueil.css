@@ -6,6 +6,7 @@
   font-family: "font-text";
   src: url(../../fonts/Roboto-Regular.ttf);
 }
+/** GENERAL SETTING **/
 * {
   margin: 0;
   padding: 0;
@@ -59,43 +60,33 @@ header img {
 }
 
 /*** Animation des coeurs ***/
-button {
+.button-heart {
   background: none;
   border: none;
   cursor: pointer;
 }
-button .fa-regular {
+
+.fa-regular {
   font-size: 25px;
-  bottom: 10px;
-  right: 0;
+  right: 10px;
   position: absolute;
 }
-button .fa-regular:hover {
+.fa-regular:hover {
   opacity: 0;
 }
-@media screen and (min-width: 1024px) {
-  button .fa-regular {
-    right: 20%;
-  }
-}
-button .fa-solid {
+
+.fa-solid {
   font-size: 25px;
   opacity: 0;
-  bottom: 10px;
-  right: 0;
+  right: 10px;
   position: absolute;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
   -webkit-background-clip: text;
   color: transparent;
 }
-button .fa-solid:hover {
+.fa-solid:hover {
   opacity: 1;
-}
-@media screen and (min-width: 1024px) {
-  button .fa-solid {
-    right: 20%;
-  }
 }
 
 /** FOOTER **/
