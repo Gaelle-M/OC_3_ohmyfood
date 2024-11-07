@@ -84,7 +84,7 @@ button .fa-solid {
   right: 0;
   position: absolute;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -296,7 +296,7 @@ footer .container-link-nav a {
   flex-direction: column;
 }
 .container-principal-fonctionnement .container-fonctionnement {
-  padding: 60px;
+  padding: 60px 0;
 }
 .container-principal-fonctionnement .container-fonctionnement h2 {
   max-width: 200px;
@@ -415,7 +415,7 @@ footer .container-link-nav a {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1019607843);
   position: relative;
   width: 300px;
-  max-width: 490px;
+  max-width: 590px;
 }
 @media screen and (min-width: 375px) {
   .container-principal-restaurant #container-restaurants .card-restaurant {
