@@ -8,9 +8,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     z-index: 9999;
     animation: fadeOut 4s forwards;
   
@@ -30,7 +28,7 @@
   
       div {
         animation: spinner-4t3wzl 1.875s infinite backwards;
-        background-color: #9356dc;
+        background-color: $color-purple;
         border-radius: 50%;
         height: 100%;
         width: 100%;
@@ -38,27 +36,27 @@
   
         &:nth-child(1) {
           animation-delay: 0.15s;
-          background-color: rgba(147, 86, 220, 0.9);
+          background-color: $color-purple;
         }
   
         &:nth-child(2) {
           animation-delay: 0.3s;
-          background-color: rgba(147, 86, 220, 0.8);
+          background-color: $color-purple;
         }
   
         &:nth-child(3) {
           animation-delay: 0.45s;
-          background-color: rgba(147, 86, 220, 0.7);
+          background-color: $color-purple;
         }
   
         &:nth-child(4) {
           animation-delay: 0.6s;
-          background-color: rgba(147, 86, 220, 0.6);
+          background-color: $color-purple;
         }
   
         &:nth-child(5) {
           animation-delay: 0.75s;
-          background-color: rgba(147, 86, 220, 0.5);
+          background-color: $color-purple;
         }
       }
     }
