@@ -157,7 +157,7 @@ footer .container-link-nav a {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-100%);
   }
   to {
     opacity: 1;
@@ -253,40 +253,43 @@ main .container-main .container-menus .container-plats {
   box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.1019607843);
   border-radius: 20px;
   cursor: pointer;
-  animation: slideInLeft 0.8s forwards;
+  animation: slideInLeft 1s forwards;
 }
 main .container-main .container-menus .container-plats:nth-child(1) {
-  animation-delay: 0.3s;
+  animation-delay: 0.1s;
 }
 main .container-main .container-menus .container-plats:nth-child(2) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 main .container-main .container-menus .container-plats:nth-child(3) {
-  animation-delay: 0.9s;
+  animation-delay: 0.5s;
 }
 main .container-main .container-menus .container-plats:nth-child(4) {
-  animation-delay: 1.2s;
+  animation-delay: 0.7s;
 }
 main .container-main .container-menus .container-plats:nth-child(5) {
-  animation-delay: 1.5s;
+  animation-delay: 0.9s;
 }
 main .container-main .container-menus .container-plats:nth-child(6) {
-  animation-delay: 1.8s;
+  animation-delay: 1.2s;
 }
 main .container-main .container-menus .container-plats:nth-child(7) {
-  animation-delay: 2.1s;
+  animation-delay: 1.4s;
 }
 main .container-main .container-menus .container-plats:nth-child(8) {
-  animation-delay: 2.4s;
+  animation-delay: 1.6s;
 }
 main .container-main .container-menus .container-plats:nth-child(9) {
-  animation-delay: 2.7s;
+  animation-delay: 1.8s;
 }
-main .container-main .container-menus .container-plats :hover + .fa-circle-check {
+main .container-main .container-menus .container-plats:hover .fa-circle-check {
   right: 0;
 }
-main .container-main .container-menus .container-plats :hover + .container-prix {
+main .container-main .container-menus .container-plats:hover .container-prix {
   right: 60px !important;
+}
+main .container-main .container-menus .container-plats:hover .container-text {
+  padding-right: 60px !important;
 }
 main .container-main .container-menus .container-plats .plat-content {
   display: flex;
@@ -306,12 +309,9 @@ main .container-main .container-menus .container-plats .plat-content .container-
   overflow: hidden;
   transition: padding-right 500ms;
 }
-main .container-main .container-menus .container-plats .plat-content .container-text:hover {
-  padding-right: 60px !important;
-}
 main .container-main .container-menus .container-plats .plat-content .container-text h3 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -331,6 +331,7 @@ main .container-main .container-menus .container-plats .plat-content .container-
   align-items: flex-end;
   position: relative;
   align-self: flex-end;
+  height: 100%;
   right: 0;
   font-size: 15px;
   font-weight: 700;
