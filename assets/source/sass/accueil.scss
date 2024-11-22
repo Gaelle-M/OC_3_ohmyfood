@@ -178,6 +178,12 @@
             flex: 1;
             padding: 25px;
 
+            &:hover {
+                .step-icon {
+                    color: $color-purple;
+                }
+            }
+
             @media screen and (min-width: 1024px) {
                 width: 400px;
             }
@@ -199,9 +205,7 @@
             color: #7e7e7e;
         }
 
-        .fa-store {
-            color: $color-purple;
-        }
+        
 
         p {
             font-size: 16px;

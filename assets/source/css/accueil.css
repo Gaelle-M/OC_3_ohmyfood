@@ -324,6 +324,9 @@ footer .container-link-nav a {
   flex: 1;
   padding: 25px;
 }
+.container-principal-fonctionnement .container-fonctionnement .step-fonctionnement:hover .step-icon {
+  color: #9356dc;
+}
 @media screen and (min-width: 1024px) {
   .container-principal-fonctionnement .container-fonctionnement .step-fonctionnement {
     width: 400px;
@@ -344,9 +347,6 @@ footer .container-link-nav a {
 }
 .container-principal-fonctionnement .container-fonctionnement i {
   color: #7e7e7e;
-}
-.container-principal-fonctionnement .container-fonctionnement .fa-store {
-  color: #9356dc;
 }
 .container-principal-fonctionnement .container-fonctionnement p {
   font-size: 16px;
